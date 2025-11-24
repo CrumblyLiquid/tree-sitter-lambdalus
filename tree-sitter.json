@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "lambdalus",
+      "camelcase": "Lambdalus",
+      "title": "Lambdalus",
+      "scope": "source.lambdalus",
+      "file-types": [
+        "lambdalus"
+      ],
+      "injection-regex": "^lambdalus$",
+      "class-name": "TreeSitterLambdalus"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Lambdalus grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "CrumblyLiquid",
+        "email": "crumblyliquid@gmail.com",
+        "url": "https://crumblyliquid.com/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/CrumblyLiquid/tree-sitter-lambdalus"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
