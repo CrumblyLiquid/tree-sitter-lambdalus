@@ -2,7 +2,7 @@
 
 Probably totally wrong grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
-## NeoVim setup
+## Neovim setup
 
 1. Clone this repository
 ```bash
@@ -27,8 +27,8 @@ vim.filetype.add({
   },
 })
 ```
-4. Add highlight queries to your NeoVim config
-Tree-sitter queries for NeoVim are placed under
+4. Add highlight queries to your Neovim config
+Tree-sitter queries for Neovim are placed under
 `<nvim config>/queries/<language>/` where `<nvim config` is usually `~/.config/nvim`.
 
 For highlighting save this as `highlights.scm` under `queries/lambdalus/`
