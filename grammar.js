@@ -22,8 +22,8 @@ module.exports = grammar({
     macro_def: ($) => seq($.macro_name, "=", $.expression),
     macro_name: ($) => new RustRegex("[A-Z]+"),
 
-    open_paren: ($) => token("("),
-    close_paren: ($) => token(")"),
+    open_paren: ($) => "(",
+    close_paren: ($) => ")",
     variable: ($) => new RustRegex("[a-z]"),
 
     lambda: ($) => choice("λ", "\\"),
@@ -31,8 +31,8 @@ module.exports = grammar({
       seq(
         $.open_paren,
         $.lambda,
-        field("variables", repeat1($.variable)),
-        token("."),
+        field("parameter", repeat1($.variable)),
+        ".",
         $.expression,
         $.close_paren,
       ),

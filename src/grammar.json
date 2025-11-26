@@ -49,18 +49,12 @@
       "value": "[A-Z]+"
     },
     "open_paren": {
-      "type": "TOKEN",
-      "content": {
-        "type": "STRING",
-        "value": "("
-      }
+      "type": "STRING",
+      "value": "("
     },
     "close_paren": {
-      "type": "TOKEN",
-      "content": {
-        "type": "STRING",
-        "value": ")"
-      }
+      "type": "STRING",
+      "value": ")"
     },
     "variable": {
       "type": "PATTERN",
@@ -92,7 +86,7 @@
         },
         {
           "type": "FIELD",
-          "name": "variables",
+          "name": "parameter",
           "content": {
             "type": "REPEAT1",
             "content": {
@@ -102,11 +96,8 @@
           }
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "."
-          }
+          "type": "STRING",
+          "value": "."
         },
         {
           "type": "SYMBOL",

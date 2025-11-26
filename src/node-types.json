@@ -62,7 +62,7 @@
     "type": "lambda_expression",
     "named": true,
     "fields": {
-      "variables": {
+      "parameter": {
         "multiple": true,
         "required": true,
         "types": [

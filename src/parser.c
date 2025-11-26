@@ -136,12 +136,12 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
 };
 
 enum ts_field_identifiers {
-  field_variables = 1,
+  field_parameter = 1,
 };
 
 static const char * const ts_field_names[] = {
   [0] = NULL,
-  [field_variables] = "variables",
+  [field_parameter] = "parameter",
 };
 
 static const TSMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
@@ -150,7 +150,7 @@ static const TSMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
   [0] =
-    {field_variables, 2},
+    {field_parameter, 2},
 };
 
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
