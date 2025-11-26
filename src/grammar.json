@@ -46,7 +46,7 @@
     },
     "macro_name": {
       "type": "PATTERN",
-      "value": "[A-Z]+"
+      "value": "[A-Z0-9+\\-*/]+"
     },
     "open_paren": {
       "type": "STRING",
@@ -56,9 +56,17 @@
       "type": "STRING",
       "value": ")"
     },
-    "variable": {
+    "identifier": {
       "type": "PATTERN",
-      "value": "[a-z]"
+      "value": "[a-z][a-z0-9]*"
+    },
+    "variable": {
+      "type": "SYMBOL",
+      "name": "identifier"
+    },
+    "parameter": {
+      "type": "SYMBOL",
+      "name": "identifier"
     },
     "lambda": {
       "type": "CHOICE",
@@ -85,14 +93,10 @@
           "name": "lambda"
         },
         {
-          "type": "FIELD",
-          "name": "parameter",
+          "type": "REPEAT1",
           "content": {
-            "type": "REPEAT1",
-            "content": {
-              "type": "SYMBOL",
-              "name": "variable"
-            }
+            "type": "SYMBOL",
+            "name": "parameter"
           }
         },
         {

@@ -1,2 +1,6 @@
-(\x.xx) a
+(\x.x x) a
 (λ x r . Y (\ f x . (a r) r (f (+ 1 2))) (SUC 0))
+(λ x y z x. z (z y y) x) ((λ o. x o) y) (x y) (z z)
+(λ x y s z . x (y s) z) (λs.(λz. (s (s z)))) (λs.(λz. (s (s (s z)))))
+
+

@@ -20,18 +20,20 @@ module.exports = grammar({
 
     macro_defs: ($) => repeat1(seq($.macro_def, ";")),
     macro_def: ($) => seq($.macro_name, "=", $.expression),
-    macro_name: ($) => new RustRegex("[A-Z]+"),
+    macro_name: ($) => new RustRegex("[A-Z0-9+\\-*/]+"),
 
     open_paren: ($) => "(",
     close_paren: ($) => ")",
-    variable: ($) => new RustRegex("[a-z]"),
+    identifier: ($) => new RustRegex("[a-z][a-z0-9]*"),
+    variable: ($) => $.identifier,
+    parameter: ($) => $.identifier,
 
     lambda: ($) => choice("λ", "\\"),
     lambda_expression: ($) =>
       seq(
         $.open_paren,
         $.lambda,
-        field("parameter", repeat1($.variable)),
+        repeat1($.parameter),
         ".",
         $.expression,
         $.close_paren,
