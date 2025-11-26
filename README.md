@@ -65,6 +65,7 @@ Then save this as `rainbow-delimiters-lambdalus.scm` under `queries/lambdalus/`
   (close_paren) @delimiter
  ) @container
 ```
+5. Open Neovim and run `:TSInstall lambdalus` or `:TSUpdate lambdalus` for updates
 
 If these don't work check
 [my dotfiles](https://github.com/CrumblyLiquid/dotfiles/tree/main/nvim/queries/lambdalus)
