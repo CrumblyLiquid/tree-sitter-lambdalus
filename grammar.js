@@ -15,11 +15,13 @@ module.exports = grammar({
     $.comment,
   ],
 
+  conflicts: ($) => [[$.macro_defs]],
+
   rules: {
-    source_file: ($) => seq($.expression),
+    source_file: ($) => seq(optional($.macro_defs), $.expression),
 
     macro_defs: ($) => repeat1(seq($.macro_def, ";")),
-    macro_def: ($) => seq($.macro_name, "=", $.expression),
+    macro_def: ($) => seq($.macro_name, ":=", $.expression),
     macro_name: ($) => new RustRegex("[A-Z0-9+\\-*/]+"),
 
     open_paren: ($) => "(",

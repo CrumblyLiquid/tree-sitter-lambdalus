@@ -6,6 +6,18 @@
       "type": "SEQ",
       "members": [
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "macro_defs"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "expression"
         }
@@ -36,7 +48,7 @@
         },
         {
           "type": "STRING",
-          "value": "="
+          "value": ":="
         },
         {
           "type": "SYMBOL",
@@ -217,7 +229,11 @@
       "name": "comment"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "macro_defs"
+    ]
+  ],
   "precedences": [],
   "externals": [],
   "inline": [],

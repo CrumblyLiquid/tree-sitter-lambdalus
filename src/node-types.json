@@ -90,6 +90,40 @@
     }
   },
   {
+    "type": "macro_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "macro_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "macro_defs",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "macro_def",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "parameter",
     "named": true,
     "fields": {},
@@ -110,11 +144,15 @@
     "root": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "expression",
+          "named": true
+        },
+        {
+          "type": "macro_defs",
           "named": true
         }
       ]
@@ -137,6 +175,14 @@
   },
   {
     "type": ".",
+    "named": false
+  },
+  {
+    "type": ":=",
+    "named": false
+  },
+  {
+    "type": ";",
     "named": false
   },
   {
