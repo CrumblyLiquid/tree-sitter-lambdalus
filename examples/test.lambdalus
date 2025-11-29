@@ -1,0 +1,2 @@
+MACRO := (\x. x x);
+MACRO a
